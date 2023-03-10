@@ -1,0 +1,391 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+*{
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: f1fbff;
+}
+.section-padding{
+    padding: 100px ;
+} 
+.carousel-item{
+    height:100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    color: #fff;
+}
+.carousel-caption p{
+    width:60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+
+}
+.carousel-inner::before{
+    content:"" ;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0, 0,0.7);
+    z-index: 1;
+}
+.navbar-nav a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar-light .navbar-brand{
+    color: #000;
+    font-size:25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover{
+    color: #000;
+
+}
+.navbar-light .navbar-brand .navbar-link{
+    border-top: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    padding: 6px 0px;
+    background: #11ADE8;
+}
+.w-100{
+    height: 100vh;
+}
+/* about */
+
+#about {
+    background-color: #F9C72A;
+    padding: 75px 15px;
+    border-bottom: 1px solid #dcd9d9;
+  }
+  #about h3 {
+    color: #fff;
+    align-items: center;
+  }
+  #about p {
+    color: black;
+    margin: 0;
+    align-items: center;
+  }
+
+
+  /* home */
+  #home {
+    padding: 50px 15px 20px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+  }
+  #home h2 {
+    color: #374054;
+    margin-bottom: 50px;
+  }
+  .home-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    text-align: left;
+  }
+  .home-block h3 {
+    font-weight: 500;
+    float: left;
+    margin: 0;
+    color: #000;
+  }
+ 
+  .home-block h4 {
+    text-align: center;
+    color: #000;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+  .home-block p,
+  .home-block ul {
+    margin: 0;
+    color: #000;
+    font-size: 0.9em;
+  }
+ 
+
+  /* gallery */
+  
+
+  .wrapper{
+    max-width: 1200px;
+    position: relative;
+}
+.wrapper i{
+    top: 50%;
+    height:46px;
+    width:46px;
+    font-size: 1.2rem;
+    text-align:center;
+    cursor: pointer;
+    position: absolute;
+    line-height: 46px;
+    background-color:#fff;
+    color:black ;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+}
+.wrapper i:first-child{
+    left: -23px;
+ 
+
+}
+.wrapper i:last-child{
+    right: -23px;
+    
+}
+.wrapper .carousel_2{
+   font-size: 0px;
+   cursor: pointer; 
+    white-space: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+.carousel_2.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+
+}
+.carousel_2.dragging img{
+    pointer-events: none;
+}
+.carousel_2 img{
+    margin-left: 14px;
+    height:300px;
+    object-fit: cover;
+    width:calc(100% / 3);
+
+}
+.carousel_2 img:first-child{
+    margin-left: 0PX;
+}
+.container-gallery{
+    height: 50vh;
+}
+
+#gallery {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.container-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.carousel_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.carousel_2 img {
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.wrapper i {
+  font-size: 30px;
+  color: #555;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Modal styling */
+#myModal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  margin-top: 65px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#myModal .modal-content {
+  margin: auto;
+  display: block;
+  height: 90vh;
+  width: fit-content;
+  padding: 20px;
+}
+
+
+
+
+
+
+#myModal .close {
+  position: absolute;
+  top: -5px;
+  right: 15px;
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#myModal .close:hover,
+#myModal .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* contct */
+.contact-section
+		{
+			padding:130px 0;
+		}
+
+		#contactForm
+		{
+			box-shadow: 0 2px 5px;
+			padding: 50px;
+		}
+
+		#contactForm textarea
+		{
+			min-height:215px;
+			padding:10px 12px;
+		}
+		#contactForm .btn
+		{
+			margin-top:10px;
+			padding:12px 30px;
+			font-weight:600;
+			text-transform:uppercase;
+		}
+
+
+@media screen and (max-width: 768px) {
+  .carousel_2 img {
+    max-width: 250px;
+  }
+}
+        
+
+/*====responsive css ====*/
+@media screen and (max-width:900px){
+    .carousel_2 img{
+        width: calc(100% /2);
+    }
+    
+    }
+@media only screen  and (max-width:991px) {
+    .carousel-caption{
+        bottom: 350px;
+    }
+    .carousel-caption p{
+        width: 100%;
+    }
+    .container-contact{
+        width: 90%;
+        padding: 30px 40px 40px 35px ;
+      }
+      .container-contact .content .right-side{
+       width: 75%;
+       margin-left: 55px;
+    }
+    }
+ 
+ 
+
+@media only screen and (max-width:767px) {
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel .item>Img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 100%;
+      }
+    .carousel-caption h1{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding:10px 15px ;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+
+    }
+    .container-contact{
+        margin: 40px 0;
+        height: 100%;
+      }
+      .container-contact .content{
+        flex-direction: column-reverse;
+      }
+     .container-contact .content .left-side{
+       width: 100%;
+       flex-direction: row;
+       margin-top: 40px;
+       justify-content: center;
+       flex-wrap: wrap;
+     }
+     .container-contact .content .left-side::before{
+       display: none;
+     }
+     .container-contact .content .right-side{
+       width: 100%;
+       margin-left: 0;
+     }
+    
+    
+}
+
+@media screen and (max-width:550px){
+    .carousel_2 img{
+        width: 100%;
+    }
+    
+    }
