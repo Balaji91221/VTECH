@@ -2,10 +2,14 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 html {
   scroll-behavior: smooth;
+  
+    height: 100%;
 }
+
 body {
   background: f1fbff;
 }
@@ -252,26 +256,7 @@ body {
   cursor: pointer;
 }
 
-/* contct */
-.contact-section {
-  padding: 130px 0;
-}
 
-#contactForm {
-  box-shadow: 0 2px 5px;
-  padding: 50px;
-}
-
-#contactForm textarea {
-  min-height: 215px;
-  padding: 10px 12px;
-}
-#contactForm .btn {
-  margin-top: 10px;
-  padding: 12px 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
 
 @media screen and (max-width: 768px) {
   .carousel_2 img {
@@ -292,14 +277,8 @@ body {
   .carousel-caption p {
     width: 100%;
   }
-  .container-contact {
-    width: 90%;
-    padding: 30px 40px 40px 35px;
-  }
-  .container-contact .content .right-side {
-    width: 75%;
-    margin-left: 55px;
-  }
+ 
+ 
 }
 
 @media only screen and (max-width: 767px) {
@@ -327,27 +306,7 @@ body {
     line-height: 1.6;
     font-size: 12px;
   }
-  .container-contact {
-    margin: 40px 0;
-    height: 100%;
-  }
-  .container-contact .content {
-    flex-direction: column-reverse;
-  }
-  .container-contact .content .left-side {
-    width: 100%;
-    flex-direction: row;
-    margin-top: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .container-contact .content .left-side::before {
-    display: none;
-  }
-  .container-contact .content .right-side {
-    width: 100%;
-    margin-left: 0;
-  }
+  
   #myModal {
     height: 100vh;
     padding-top: 50px;
